@@ -1,5 +1,30 @@
+import Image from "next/image";
+import Layout from "../../components/Layout";
+import { formatearFecha } from "../../helpers/index";
+import styles from "../../styles/Entrada.module.css";
+
 const EntradaBlog = ({ entrada }) => {
-  return <div>EntradaBlog</div>;
+  const { contenido, imagen, published_at, titulo } = entrada;
+  return (
+    <Layout>
+      <main className="contenedor">
+        <h1 className="heading">{titulo}</h1>
+        <article className={styles.entrada}>
+          <Image
+            layout="responsive"
+            width={800}
+            height={600}
+            src={`${process.env.NEXT_PUBLIC_API_URL}${imagen.url}`}
+            alt={`Imagen de ${titulo}`}
+          />
+          <div className={styles.contenido}>
+            <p className={styles.fecha}>{formatearFecha(published_at)}</p>
+            <p className={styles.texto}>{contenido}</p>
+          </div>
+        </article>
+      </main>
+    </Layout>
+  );
 };
 
 export async function getStaticPaths() {
