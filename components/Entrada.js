@@ -5,6 +5,7 @@ import styles from "../styles/Entrada.module.css";
 
 const Entrada = ({ entrada }) => {
   const { titulo, resumen, imagen, published_at, id } = entrada;
+
   return (
     <article>
       <Image
@@ -12,7 +13,7 @@ const Entrada = ({ entrada }) => {
         layout="responsive"
         width={800}
         height={600}
-        src={`http://localhost:1337${imagen.url}`}
+        src={`${process.env.NEXT_PUBLIC_API_URL}${imagen.url}`}
         alt={`Imagen blog ${titulo}`}
       />
       <div className={styles.contenido}>
