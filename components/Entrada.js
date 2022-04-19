@@ -8,6 +8,7 @@ const Entrada = ({ entrada }) => {
   return (
     <article>
       <Image
+        priority={true}
         layout="responsive"
         width={800}
         height={600}
