@@ -4,18 +4,24 @@
   --blanco: #FFF;
   --fuente-principal: 'Outfit', sans-serif;
 }
+
 html {
-  font-size: 62.5%;
+  font-size: 45%;
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
+
 body {
   font-size: 2rem;
   font-family: var(--fuente-principal);
   line-height: 1.5;
 }
+
 img {
   max-width: 100%;
 }
@@ -25,6 +31,7 @@ img {
   margin: 0 auto;
   width: 95%;
 }
+
 [class*="heading"] {
   font-size: 4rem;
   text-align: center;
