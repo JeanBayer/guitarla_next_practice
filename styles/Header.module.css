@@ -43,3 +43,53 @@
 .navegacion a:hover {
     background-color: var(--primary);
 }
+
+.modelo {
+    color: var(--blanco);
+    margin-top: 5rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .modelo {
+        text-align: left;
+        width: 50%;
+    }
+}
+
+.modelo h2 {
+    font-size: 8rem;
+}
+
+.modelo p:first-of-type {
+    font-size: 2.2rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.precio {
+    font-size: 6rem;
+    color: var(--primary);
+    font-weight: 900;
+    line-height: 0;
+}
+
+.enlace {
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--blanco);
+    border: 2px solid var(--primary);
+    padding: 1rem 5rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+.enlace:hover {
+    background-color: var(--primary);
+    color: var(--blanco);
+}
