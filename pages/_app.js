@@ -20,18 +20,19 @@ function MyApp({ Component, pageProps }) {
     return carrito.some((productoAgregado) => productoAgregado.id === id);
   };
 
-  const actualizarCarrito = (producto) => {
-    return carrito.map((productoAgregado) => {
-      if (productoAgregado.id === producto.id) {
-        productoAgregado.cantidad = producto.cantidad;
+  const actualizarCantidad = (productoAgregado) => {
+    const carritoActualizado = carrito.map((producto) => {
+      if (producto.id === productoAgregado.id) {
+        producto.cantidad = productoAgregado.cantidad;
       }
-      return productoAgregado;
+      return producto;
     });
+    setCarrito(carritoActualizado);
   };
 
   const agregarCarrito = (producto) => {
     if (existeProducto(producto.id)) {
-      setCarrito(actualizarCarrito(producto));
+      actualizarCantidad(producto);
     } else {
       setCarrito([...carrito, producto]);
     }
@@ -42,6 +43,7 @@ function MyApp({ Component, pageProps }) {
       {...pageProps}
       carrito={carrito}
       agregarCarrito={agregarCarrito}
+      actualizarCantidad={actualizarCantidad}
     />
   );
 }
