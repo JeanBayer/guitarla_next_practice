@@ -29,7 +29,7 @@ const Header = ({ guitarra, carritoLength }) => {
               <a className={styles.carrito}>
                 <Image
                   layout="fixed"
-                  width={30}
+                  width={25}
                   height={25}
                   src="/img/carrito.png"
                   alt="Carrito"

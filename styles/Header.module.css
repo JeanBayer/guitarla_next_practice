@@ -36,7 +36,7 @@
 .navegacion a {
     color: var(--blanco);
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
     padding: .5rem;
