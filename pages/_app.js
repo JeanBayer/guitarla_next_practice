@@ -33,8 +33,10 @@ function MyApp({ Component, pageProps }) {
   const agregarCarrito = (producto) => {
     if (existeProducto(producto.id)) {
       actualizarCantidad(producto);
+      alert("Producto actualizado");
     } else {
       setCarrito([...carrito, producto]);
+      alert("Producto agregado");
     }
   };
 

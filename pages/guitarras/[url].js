@@ -23,7 +23,6 @@ const Producto = ({ guitarra, agregarCarrito, carritoLength }) => {
     };
 
     agregarCarrito(guitarraSelecionada);
-    
   };
 
   return (
