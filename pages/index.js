@@ -5,9 +5,13 @@ import ListadoBlog from "../components/ListadoBlog";
 
 export default function Home({ guitarras, curso, entradas, carritoLength }) {
   return (
-    <Layout pagina="Inicio" guitarra={guitarras[3]} carritoLength={carritoLength}>
+    <Layout
+      pagina="Inicio"
+      guitarra={guitarras[3]}
+      carritoLength={carritoLength}
+    >
       <main className="contenedor">
-        <h1 className="heading">Nuestra colección</h1>
+        <h1 className="heading">Nuestra última colección</h1>
         <Listado guitarras={guitarras} />
       </main>
       <Curso curso={curso} />
@@ -19,7 +23,7 @@ export default function Home({ guitarras, curso, entradas, carritoLength }) {
 }
 
 export async function getServerSideProps() {
-  const urlGuitarras = `${process.env.API_URL}/guitarrras`;
+  const urlGuitarras = `${process.env.API_URL}/guitarrras?_limit=6`;
   const urlCursos = `${process.env.API_URL}/cursos`;
   const urlBlog = `${process.env.API_URL}/blogs?_limit=3&_sort=created_at:desc`;
 
