@@ -20,6 +20,7 @@
     align-items: center;
     border-bottom: 1px solid #cfcfcf;
     padding: 3rem 0;
+    position: relative;
 }
 
 .producto:last-of-type {
@@ -70,4 +71,13 @@
 
 .subtotal span {
     font-size: 2.4rem;
+}
+
+.eliminar {
+    all: unset;
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    font-weight: bold;
+    cursor: pointer;
 }

@@ -38,12 +38,18 @@ function MyApp({ Component, pageProps }) {
     }
   };
 
+  const eliminarProducto = (id) => {
+    const carritoActualizado = carrito.filter((producto) => producto.id !== id);
+    setCarrito(carritoActualizado);
+  };
+
   return (
     <Component
       {...pageProps}
       carrito={carrito}
       agregarCarrito={agregarCarrito}
       actualizarCantidad={actualizarCantidad}
+      eliminarProducto={eliminarProducto}
     />
   );
 }
