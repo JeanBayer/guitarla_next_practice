@@ -1,9 +1,9 @@
 import Layout from "../components/Layout";
 import ListadoBlog from "../components/ListadoBlog";
 
-const Blog = ({ entradas }) => {
+const Blog = ({ entradas, carritoLength }) => {
   return (
-    <Layout pagina="Blog Virtual">
+    <Layout pagina="Blog Virtual" carritoLength={carritoLength}>
       <main className="contenedor">
         <ListadoBlog entradas={entradas} />
       </main>

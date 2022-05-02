@@ -2,9 +2,9 @@ import React from "react";
 import Layout from "../components/Layout";
 import Listado from "../components/Listado";
 
-const Tienda = ({ guitarras }) => {
+const Tienda = ({ guitarras, carritoLength }) => {
   return (
-    <Layout pagina="Tienda Virtual">
+    <Layout pagina="Tienda Virtual" carritoLength={carritoLength}>
       <main className="contenedor">
         <h1 className="heading">Nuestra colección</h1>
         <Listado guitarras={guitarras} />

@@ -3,10 +3,10 @@ import Layout from "../../components/Layout";
 import { formatearFecha } from "../../helpers/index";
 import styles from "../../styles/Entrada.module.css";
 
-const EntradaBlog = ({ entrada }) => {
+const EntradaBlog = ({ entrada, carritoLength }) => {
   const { contenido, imagen, published_at, titulo } = entrada;
   return (
-    <Layout pagina={titulo}>
+    <Layout pagina={titulo} carritoLength={carritoLength}>
       <main className="contenedor">
         <h1 className="heading">{titulo}</h1>
         <article className={styles.entrada}>

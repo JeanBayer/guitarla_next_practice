@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import Image from "next/image";
 import styles from "../styles/Carrito.module.css";
 
-const Carrito = ({ carrito, actualizarCantidad, eliminarProducto }) => {
+const Carrito = ({ carrito, actualizarCantidad, eliminarProducto, carritoLength }) => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -14,8 +14,9 @@ const Carrito = ({ carrito, actualizarCantidad, eliminarProducto }) => {
     );
     setTotal(calculoTotal);
   }, [carrito]);
+
   return (
-    <Layout pagina="Carrito de compras">
+    <Layout pagina="Carrito de compras" carritoLength={carritoLength}>
       <h1 className="heading">Carrito</h1>
       <main className={`${styles.contenido} contenedor`}>
         <div className={styles.carrito}>

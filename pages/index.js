@@ -3,9 +3,9 @@ import Listado from "../components/Listado";
 import Curso from "../components/Curso";
 import ListadoBlog from "../components/ListadoBlog";
 
-export default function Home({ guitarras, curso, entradas }) {
+export default function Home({ guitarras, curso, entradas, carritoLength }) {
   return (
-    <Layout pagina="Inicio" guitarra={guitarras[3]}>
+    <Layout pagina="Inicio" guitarra={guitarras[3]} carritoLength={carritoLength}>
       <main className="contenedor">
         <h1 className="heading">Nuestra colección</h1>
         <Listado guitarras={guitarras} />

@@ -47,6 +47,7 @@ function MyApp({ Component, pageProps }) {
     <Component
       {...pageProps}
       carrito={carrito}
+      carritoLength={carrito.length}
       agregarCarrito={agregarCarrito}
       actualizarCantidad={actualizarCantidad}
       eliminarProducto={eliminarProducto}

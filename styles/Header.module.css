@@ -47,6 +47,20 @@
     background-color: var(--primary);
 }
 
+.carrito {
+    display: flex;
+    position: relative;
+}
+
+.cantidad {
+    position: absolute;
+    top: -4px;
+    right: -9px;
+    background-color: var(--primary);
+    border-radius: 25px;
+    padding: 1px 8px;
+}
+
 .modelo {
     color: var(--blanco);
     margin-top: 5rem;

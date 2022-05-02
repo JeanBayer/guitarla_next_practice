@@ -4,9 +4,8 @@ import { useRouter } from "next/router";
 
 import styles from "../styles/Header.module.css";
 
-const Header = ({ guitarra }) => {
+const Header = ({ guitarra, carritoLength }) => {
   const router = useRouter();
-  console.log(router);
   return (
     <header className={styles.header}>
       <div className="contenedor">
@@ -27,7 +26,7 @@ const Header = ({ guitarra }) => {
             <Link href="/blog">Blog</Link>
             <Link href="/tienda">Tienda</Link>
             <Link href="/carrito">
-              <a>
+              <a className={styles.carrito}>
                 <Image
                   layout="fixed"
                   width={30}
@@ -35,6 +34,9 @@ const Header = ({ guitarra }) => {
                   src="/img/carrito.png"
                   alt="Carrito"
                 />
+                {carritoLength > 0 && (
+                  <span className={styles.cantidad}>{carritoLength}</span>
+                )}
               </a>
             </Link>
           </nav>
